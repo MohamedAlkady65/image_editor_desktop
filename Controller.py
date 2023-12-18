@@ -63,6 +63,7 @@ class Controller:
         else:
             saved_image = self.edited_image
 
+        saved_image = cv2.cvtColor(saved_image,cv2.COLOR_RGB2BGR)
         cv2.imwrite(saved_path,saved_image)
 
 
